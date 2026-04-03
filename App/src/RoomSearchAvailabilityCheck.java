@@ -68,6 +68,9 @@ class RoomInventory {
     public int getAvailability(String roomType) {
         return inventory.getOrDefault(roomType, 0);
     }
+    public void updateAvailability(String roomType, int count) {
+        inventory.put(roomType, count);
+    }
 }
 
 class SearchService {
